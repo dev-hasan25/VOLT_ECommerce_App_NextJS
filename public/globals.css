@@ -15,3 +15,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
+#addToCart {
+  visibility: hidden;
+}
+
+#productCard:hover {
+  #addToCart {
+    visibility: visible;
+  }
+  
+}
+

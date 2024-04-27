@@ -17,43 +17,43 @@ export const metadata = {
 };
 
 
-
 export default function RootLayout({ children }) {
   return (
       
       <html lang= "en" >
-        <body className=" font-mono  bg-white text-white" >
+        <body className=" font-mono  bg-[#f6f6f7] text-white" >
 
-          <header>
+          <header className="sticky top-0 z-40 ">
 
             <div className="
-              bg-[#333333] w-[100vw]  h-[40px] px-[7.5vw]
-                flex  flex-row  justify-between items-center  
+              bg-[#333333] w-[100vw]  h-[30px] px-[7.5vw]
+                flex  flex-row  justify-between items-center 
             ">
-            <div>
+            <div className="flex  flex-row  justify-center items-center ">
                 <IoCallOutline />
+                <div className="w-2"/>
                 <h1> +02-01013202546  </h1>
             </div>
-            <div className="flex flex-row">
-              <MdOutlineEmail />
-              <h1>ha7444447@gmail.com</h1> 
-              <div className="w-6"/>
-              <h1>Hasan Ali Elsayed Moohamed</h1>
+            <div className="flex  flex-row  justify-center items-center ">
+                <MdOutlineEmail />
+                <div className="w-2"/>
+                <h1>ha7444447@gmail.com</h1> 
             </div>
+
           </div>
 
 {/*==========================================================================*/}
             
           <div className="
-              px-[7.5vw] h-[100px]  bg-[#f61d3e] 
-              flex flex-row justify-between items-center
+              px-[7.5vw] h-[75px]  bg-[#f61d3e] 
+              flex flex-row justify-between items-center sticky top-0
             ">
               <Link href="/">
                 <Image
                   src = {logo}
                   alt="volt"
                   width= "5vw"
-                  height= {70}
+                  height= {55}
                 />
               </Link>
             
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
               
             <select name="searchCategory" id="searchCategory" className=" 
               inline-flex items-center
-              py-2.5 px-4  rounded-s-lg border-none
+              py-2.5 px-4  rounded-s-xl border-none
               text-lg font-medium text-center text-[#f61d3e]
               bg-[#ffeb00]  focus:outline-none 
               cursor-pointer
@@ -87,63 +87,67 @@ export default function RootLayout({ children }) {
                 placeholder="Search For Tech Products"
                 className="
                 h-[inherit] w-full
-                px-[15px] text-black "
+                px-[15px] text-black bg-[#f4f8f9]"
               />
                 
-              <button className="bg-[#ffeb00] py-[7px] px-[14px] rounded-tr-lg rounded-br-lg">
-                <MdOutlineSearch className="text-[30px] text-[#f61d3e]"/>
+              <button className="bg-[#ffeb00] py-[7px] px-[14px] rounded-tr-xl rounded-br-xl">
+                <MdOutlineSearch className="text-[30px] text-[#f61d3e] font-bold"/>
               </button>
 
             </div>
 
+            
             {/*cart - fav - noti - user section*/}
             
-              <div className="w-[12.5vw] flex flex-row justify-between items-center">
+            <div className="w-[12.5vw] flex flex-row justify-between items-center">
                 
-                <Link href= "/cart" className="
-                  text-white 
-                  hover:bg-[#ffeb00] hover:text-[#f61d3e]
-                  rounded-full  p-[10px]
-                ">
-                  <MdOutlineShoppingCart className="text-[30px] "  />
-                </Link>
+              <button  className="
+                text-white 
+                hover:bg-[#ffeb00] hover:text-[#f61d3e]
+                rounded-full  p-[10px]
+              ">
+                <MdOutlineShoppingCart className="text-[30px] "  />
+              </button>
 
-              <Link href="/favourities" className="
+              <button  className="
                   text-white 
                   hover:bg-[#ffeb00] hover:text-[#f61d3e]
                   rounded-full  p-[10px]
                 ">
-                  <FaRegHeart className="text-[24px] "  />
-                </Link>
-              <div className="
+                  <FaRegHeart className="text-[28px] "  />
+              </button>
+              
+              <button className="
                 text-white  
                 hover:bg-[#ffeb00] hover:text-[#f61d3e]
                 rounded-full  p-[10px]
                 ">
                 <LuBell className="text-[28px] " />
-              </div>
+              </button>
 
-              <div className="
+              <button className="
                 text-white
                 hover:bg-[#ffeb00] hover:text-[#f61d3e]
                 rounded-full  p-[10px]
               ">
                 <FaRegUser  className="text-[24px]" />
-              </div>
+              </button>
               
               </div>
             
             </div>
           <div className="w-[100vw] h-[1px] bg-gray-400"/>
 
+        </header>
+
 {/*==========================================================================*/}
 
           {/* category robbin section*/}
-
+        
           <div className="
               flex  flex-row  justify-between items-center
               bg-[#f61d3e]  px-[7.5vw] 
-              font-mono font-semibold text-[20px]
+              font-mono font-semibold text-[20px]  
             ">
               
             <div className=" 
@@ -215,9 +219,9 @@ export default function RootLayout({ children }) {
             </div>
             
 
-            </div>
+          </div>
 
-          </header>
+          
           <br />
           {children}
 
