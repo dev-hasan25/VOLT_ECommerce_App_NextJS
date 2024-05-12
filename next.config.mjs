@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["images.rawpixel.com"],
+        remotePatterns: [
+        {
+            protocol: 'https',
+            hostname: 'fakestoreapi.com',
+            port: '',
+            pathname: '/products/**',
+        },
+        ],
+        domains: [ "fakestoreapi.com" ],
+        unoptimized: true,
     },
 };
 
